@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 @Entity
-@Table(name = "persons")
+//@Table(name = "persons")
 public class Person {
 
     @Id

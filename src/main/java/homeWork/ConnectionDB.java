@@ -15,7 +15,7 @@ public class ConnectionDB {
 
 
 
-    private static final String URL = "jdbc:mysql://persons.db:3306/";
+    private static final String URL = "jdbc:mysql://localhost:3306/";
     private static final String USER = "root";
     private static final String PASSWORD = "password";
     private static Person[] array = new Person[]{person1,person2,person3,person4,person5};

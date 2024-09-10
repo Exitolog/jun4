@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  junior4_homework:
+    image: ${DOCKER_REGISTRY-}junior4_homework
+    container_name: persons.app
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+  persons-db:
+    image: mysql:latest
+    container_name: persons.db
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=personsDB
+    volumes:
+      - ./containers/database:/var/lib/mysql
+    ports:
+      - 3306:3306
